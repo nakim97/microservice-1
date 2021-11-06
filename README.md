@@ -1,10 +1,12 @@
 # microservice
 
+# Features
+
 Scrapes news articles from IMDB's Movie News Site: 'https://www.imdb.com/news/movie'
 
 Returns JSON objects with the keys: {"title", "date", "writer", "magazine", "body", "img", "larger_img", "link"} 
 
-# How to run: 
+# Instructions: 
 1. git clone onto local computer 
 2. 'npm install' to install all dependencies 
 3. run using 'node imdbNewsScraper.js' on terminal 
