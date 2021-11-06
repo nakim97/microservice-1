@@ -11,13 +11,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 
-const fetchTitles = async () => {
+const fetchNews = async () => {
 	try {
         const response = await axios.get('https://www.imdb.com/news/movie');
 
         const html = response.data;
 
-	const $ = cheerio.load(html);
+		const $ = cheerio.load(html);
 
         const results = [];
 
@@ -61,7 +61,9 @@ const fetchTitles = async () => {
 
 
         app.get('/imdbnews', function(req, res) {
-            res.json(results)
+            console.log(results);
+
+            res.json({"results": results})
         })
         
             console.log(results);
@@ -73,6 +75,6 @@ const fetchTitles = async () => {
 	}
 };
 
-fetchTitles().then((results) => console.log(results));
+fetchNews().then((results) => console.log(results));
 
 app.listen(5000, () => console.log(`Server started on 5000`));
