@@ -9,5 +9,5 @@ Returns JSON objects with the keys: {"title", "date", "writer", "magazine", "bod
 # Instructions: 
 1. git clone onto local computer 
 2. 'npm install' to install all dependencies 
-3. run using 'node imdbNewsScraper.js' on terminal 
+3. run using 'node news.js' on terminal 
 4. starts on 'http://localhost:5000/imdbnews'
