@@ -17,7 +17,7 @@ const fetchTitles = async () => {
 
         const html = response.data;
 
-		const $ = cheerio.load(html);
+	const $ = cheerio.load(html);
 
         const results = [];
 
